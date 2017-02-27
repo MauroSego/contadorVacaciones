@@ -1,14 +1,28 @@
 body {
-  background-color:;
+	/*background-color: #1D406D;*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	color: white;
+	display: block;
+	text-align: center;
+	font-family: 'Sans-serif', 'Arial';
+	background: rgba(19,15,148,1);
+	
 }
 .container{
-  margin: 0 auto;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-}
-.dias{
+	max-width: 60%;
+	margin: 0 auto;
+	padding: 0 1em;
+	border: 1px solid #010101;
+	background: #D4D9B9;
+	border-radius: 25px;
+	color: black;	
 
+}
+#dias, #horas, #minutos, #segundos {
+	font-size: 25px;
+	margin: 1em 0;
 }
