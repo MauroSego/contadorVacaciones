@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Contador para las vacaciones</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body onload="contar('container')">
-  <id id="container" ></id>
+  <div class="container">
+    <h2>Faltan</h2>
+    
+    <div id="dias"></div>
+    <div id="horas"></div>
+    <div id="minutos"></div>
+    <div id="segundos"></div>
+  </div>
 
 <script>
   
   function contar(id){
-    var fecha = new Date( '2017', '2', '10' );
+    var fecha = new Date( '2017', '2', '10');
     var hoy = new Date();
     var dias = 0;
     var horas = 0;
@@ -29,13 +37,20 @@
       diferencia = diferencia - ( 60 * minutos ); 
       segundos = Math.floor(diferencia);
 
-      document.getElementById(id).innerHTML = 'Faltan: ' + dias + ' días, ' + horas + ' Horas, ' + minutos + ' Minutos, ' + segundos + ' Segundos...'
+      document.getElementById('dias').innerHTML = dias + ' d.';
+      document.getElementById('horas').innerHTML = horas + 'Hs.'
+      document.getElementById('minutos').innerHTML = minutos + 'min.';
+      document.getElementById('segundos').innerHTML = segundos + 'seg.';
 
       if ( dias > 0 || horas > 0 || minutos > 0 || segundos > 0 ){
         setTimeout(" contar (\"" + id + "\")", 1000)
       }
       else {
-        document.getElementById('restante').innerHTML = 'Quedan: ' + dias + ' días, ' + horas + ' Horas, ' + minutos + ' Minutos, ' + segundos + ' Segundos...'
+        document.getElementById('dias').innerHTML = dias + ' días';
+
+        document.getElementById('horas').innerHTML = horas + ' Horas, ' + minutos + ' Minutos, ' + segundos + ' Segundos...'
+        document.getElementById('minutos').innerHTML = minutos + ' minutos'
+        document.getElementById('segundos').innerHTML = segundos + ' segundos'
       }
     }
     

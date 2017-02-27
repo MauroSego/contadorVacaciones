@@ -1,0 +1,14 @@
+body {
+  background-color:;
+}
+.container{
+  margin: 0 auto;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+.dias{
+
+}
